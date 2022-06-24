@@ -8,6 +8,7 @@ try:
         url = f"https://news.ycombinator.com/{link_end}"
         data = requests.get(url).content.decode()
         soup = BeautifulSoup(data, "lxml")
+        
         for tag in soup.find_all('a', class_="titlelink"):
             if 'https://github.com' in (link := tag.get('href')):
                 print(link)
