@@ -1,9 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 link_end = "newest"
-
 
 try:
     while True:
